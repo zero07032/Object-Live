@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -12,6 +13,10 @@
   </head>
   <body>
     <h1 class="text-center py-4">Form</h1>
+
+    <div class="d-flex justify-content-center">
+      <img src="{% static 'blog-post-01.jpg' %}" class="d-block">
+    </div>
 
 
     <form action="{% url 'addblog' %}" class="border p-5 m-5" method="POST" enctype="multipart/form-data">
