@@ -27,6 +27,11 @@
           <label for="exampleFormControlTextarea1" class="form-label">Blog Image</label>
           <input type="file" class="form-control" id="exampleFormControlInput1" name="img">
           <p>{{blog1.img}}</p>
+          <div class="d-flex justify-content-center">
+            <img src="{{blog1.img.url}}" class="d-block border" style="height:100px; width:100px;">
+          </div>
+
+          
           
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
