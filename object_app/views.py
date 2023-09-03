@@ -6,9 +6,12 @@ from django.http import HttpResponseRedirect
 
 # Create your views here.
 def home(request):
-    #pb = blog.objects.get(pk=6)
-    #pb.title = "oke"
-    context = {"blogs": blog.objects.all()}
+    # pb = blog.objects.get(pk=6)
+    # pb.title = "oke"
+    context = {
+        "blogs": blog.objects.all(),
+        "new": blog.objects.all()
+    }
     return render(request, "home.html", context)
 
 
@@ -20,7 +23,7 @@ def AddBlog(request):
     return redirect("/")
 
 
-def BlogApdateView(request, pk):
+def BlogDetailsView(request, pk):
     blog1 = blog.objects.get(pk=pk)
     context = {"blog1": blog1}
     return render(request, "update_form.html", context)

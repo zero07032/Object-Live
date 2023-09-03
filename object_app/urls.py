@@ -5,7 +5,7 @@ from . import views
 urlpatterns = [
     path("", views.home, name="home"),
     path("addblog/", views.AddBlog, name="addblog"),
-    path("BlogApdateView/<int:pk>/", views.BlogApdateView, name="BlogApdateView"),
+    path("blog-details/<int:pk>/", views.BlogDetailsView, name="blog-details"),
     path("UpdateBlog/<int:pk>/", views.UpdateBlog, name="UpdateBlog"),
 ]
 
